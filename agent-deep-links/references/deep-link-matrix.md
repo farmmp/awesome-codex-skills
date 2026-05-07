@@ -21,6 +21,7 @@ Scope: practical deep links for agent workflows, especially Slack handoff links.
 | Visual Studio (Windows IDE) | n/a | Not available | n/a | Use CLI fallback (`devenv /edit <path>`). |
 | Claude Desktop | `claude://` | Unknown | `claude://...` | Scheme registration exists, but stable public route list is unclear. |
 | Xcode | `xcode://` | Partial | `xcode://...` | Scheme exists; file-open route details are not well documented. |
+| Windsurf | `windsurf://` | Supported | `windsurf://file/<absolute-path>:<line>:<column>`, `windsurf://file/<absolute-folder-path>/` | Same pattern as Cursor/VS Code; verified working on macOS. |
 | CLI-only agents | n/a | Not available | n/a | No standard clickable deep-link protocol without custom handlers. |
 
 ## Slack Format
@@ -36,6 +37,7 @@ Examples:
 - `<codex://threads/123e4567-e89b-12d3-a456-426614174000|Open in Codex>`
 - `<cursor://file/<absolute-path>:<line>:<column>|Open in Cursor>`
 - `<vscode://file/<absolute-path>:<line>:<column>|Open in VS Code>`
+- `<windsurf://file/<absolute-path>:<line>:<column>|Open in Windsurf>`
 
 ## Verification Commands
 
