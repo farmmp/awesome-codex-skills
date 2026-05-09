@@ -22,6 +22,7 @@ Scope: practical deep links for agent workflows, especially Slack handoff links.
 | Claude Desktop | `claude://` | Unknown | `claude://...` | Scheme registration exists, but stable public route list is unclear. |
 | Xcode | `xcode://` | Partial | `xcode://...` | Scheme exists; file-open route details are not well documented. |
 | Windsurf | `windsurf://` | Supported | `windsurf://file/<absolute-path>:<line>:<column>`, `windsurf://file/<absolute-folder-path>/` | Same pattern as Cursor/VS Code; verified working on macOS. |
+| Zed | `zed://` | Partial | `zed://file/<absolute-path>:<line>` | Personal note: column number is not supported in Zed deep links as of early 2026. |
 | CLI-only agents | n/a | Not available | n/a | No standard clickable deep-link protocol without custom handlers. |
 
 ## Slack Format
@@ -38,6 +39,7 @@ Examples:
 - `<cursor://file/<absolute-path>:<line>:<column>|Open in Cursor>`
 - `<vscode://file/<absolute-path>:<line>:<column>|Open in VS Code>`
 - `<windsurf://file/<absolute-path>:<line>:<column>|Open in Windsurf>`
+- `<zed://file/<absolute-path>:<line>|Open in Zed>` <!-- no column support -->
 
 ## Verification Commands
 
@@ -66,3 +68,4 @@ When no deep link exists:
 - Cursor deeplinks docs: https://cursor.com/docs/deeplinks
 - VS Code URL docs: https://code.visualstudio.com/docs/editor/command-line#_opening-vs-code-with-urls
 - Visual Studio CLI docs: https://learn.microsoft.com/en-us/visualstudio/ide/reference/devenv-command-line-switches?view=vs-2022
+- Zed URL scheme discussion: https://github.com/zed-industries/zed/issues/(tracked upstream; no official docs yet)
