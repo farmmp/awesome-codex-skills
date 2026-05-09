@@ -23,6 +23,7 @@ Scope: practical deep links for agent workflows, especially Slack handoff links.
 | Xcode | `xcode://` | Partial | `xcode://...` | Scheme exists; file-open route details are not well documented. |
 | Windsurf | `windsurf://` | Supported | `windsurf://file/<absolute-path>:<line>:<column>`, `windsurf://file/<absolute-folder-path>/` | Same pattern as Cursor/VS Code; verified working on macOS. |
 | Zed | `zed://` | Partial | `zed://file/<absolute-path>:<line>` | Personal note: column number is not supported in Zed deep links as of early 2026. |
+| JetBrains IDEs | `jetbrains://` | Partial | `jetbrains://<product>/navigate/reference?project=<name>&path=<relative-path>` | Personal note: tested with IntelliJ IDEA; product slug varies (e.g. `idea`, `pycharm`). Requires Toolbox App running. |
 | CLI-only agents | n/a | Not available | n/a | No standard clickable deep-link protocol without custom handlers. |
 
 ## Slack Format
@@ -40,6 +41,7 @@ Examples:
 - `<vscode://file/<absolute-path>:<line>:<column>|Open in VS Code>`
 - `<windsurf://file/<absolute-path>:<line>:<column>|Open in Windsurf>`
 - `<zed://file/<absolute-path>:<line>|Open in Zed>` <!-- no column support -->
+- `<jetbrains://idea/navigate/reference?project=<name>&path=<relative-path>|Open in IntelliJ>` <!-- requires Toolbox -->
 
 ## Verification Commands
 
@@ -66,6 +68,5 @@ When no deep link exists:
 ## Sources
 
 - Cursor deeplinks docs: https://cursor.com/docs/deeplinks
-- VS Code URL docs: https://code.visualstudio.com/docs/editor/command-line#_opening-vs-code-with-urls
-- Visual Studio CLI docs: https://learn.microsoft.com/en-us/visualstudio/ide/reference/devenv-command-line-switches?view=vs-2022
-- Zed URL scheme discussion: https://github.com/zed-industries/zed/issues/(tracked upstream; no official docs yet)
+- VS Code URL docs: https://code.visualstudio.com/docs
+- JetBrains Toolbox deep links: https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html
