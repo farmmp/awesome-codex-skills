@@ -4,5 +4,7 @@ interface:
   default_prompt: "Create or validate deep links for Codex/Cursor/VS Code and provide fallbacks for unsupported apps."
   # Personal note: also useful for Windsurf and Zed editor deep links
   # Personal note: Zed deep link format is zed://file/{path}:{line}
+  # Personal note: Windsurf deep link format is windsurf://file/{path}:{line}
   fallback_behavior: "copy_to_clipboard"  # default was silent fail; copy link instead
   fallback_notify: true  # show a toast/notification when fallback is triggered
+  fallback_notify_duration_ms: 3000  # how long the toast stays visible (default was 2000, felt too short)
